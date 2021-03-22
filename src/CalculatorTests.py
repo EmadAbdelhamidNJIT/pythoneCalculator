@@ -2,9 +2,13 @@ import unittest
 from Calculator import Calculator
 
 class MyTestCase(unittest.TestCase):
-    def test_instance_claculator(self):
+    def test_instantiate_claculator(self):
         calculator = Calculator()
         self.assertIsInstance(calculator, Calculator)
+
+    def test_result_property_calculator(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.result, 4)
 
 
 if __name__ == '__main__':
