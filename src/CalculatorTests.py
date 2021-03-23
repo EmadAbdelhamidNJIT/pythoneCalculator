@@ -7,6 +7,7 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.calculator = Calculator()
+      #  self.csv_reader = CsvReader('Subtraction.csv')
 
     def test_instantiate_claculator(self):
         self.assertIsInstance(self.calculator, Calculator)
@@ -31,12 +32,11 @@ class MyTestCase(unittest.TestCase):
 
     # testing from file
 
-    def test_subtractionFromFile(self):
-        test_data = CsvReader("../Tests/Data/Subtraction.csv").data
+    def test_AdditionFromFile(self):
+        test_data = CsvReader('./src/Addition.csv').data
         for row in test_data:
             result = float(row['Result'])
-            self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), result)
-            self.assertEqual(self.calculator.result, result)
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
 
 
 if __name__ == '__main__':

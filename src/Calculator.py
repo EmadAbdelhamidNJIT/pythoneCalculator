@@ -1,7 +1,7 @@
 import math
 
 def addition(a, b):
-    return a + b
+    return float(a) + float(b)
 def subtraction(a, b):
     return a - b
 def multiplication(a, b):
