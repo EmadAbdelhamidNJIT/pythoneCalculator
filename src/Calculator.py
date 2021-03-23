@@ -3,15 +3,15 @@ import math
 def addition(a, b):
     return float(a) + float(b)
 def subtraction(a, b):
-    return a - b
+    return float(a) - float(b)
 def multiplication(a, b):
-    return a * b
+    return float(a) * float(b)
 def division(a, b):
-    return a / b
+    return float(a) / float(b)
 def square(a):
-    return a * a
+    return float(a) * float(a)
 def squareRoot(a):
-    return math.sqrt(a)
+    return math.sqrt(float(a))
 
 class Calculator:
     result = 0
