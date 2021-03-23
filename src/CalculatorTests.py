@@ -44,35 +44,30 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), result)
-            self.assertEqual(self.calculator.result, result)
 
     def test_MultiplicationFromFile(self):
         test_data = CsvReader('./src/Multiplication.csv').data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), result)
-            self.assertEqual(self.calculator.result, result)
 
     def test_DividisionFromFile(self):
         test_data = CsvReader('./src/Division.csv').data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), result)
-            self.assertEqual(self.calculator.result, result)
 
     def test_sqrFromFile(self):
         test_data = CsvReader('./src/Square.csv').data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.sqr(row['Value 1']), result)
-            self.assertEqual(self.calculator.result, result)
 
     def test_sqrRootFromFile(self):
         test_data = CsvReader('./src/Square Root.csv').data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.sqrRoot(row['Value 1']), result)
-            self.assertEqual(self.calculator.result, result)
 
 if __name__ == '__main__':
     unittest.main()
